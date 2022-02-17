@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+.dark {
+  --background: hsl(222, 26%, 31%);
+  --btnsContainerBackground: hsl(223, 31%, 20%);
+  --screenBackground: hsl(224, 36%, 15%);
+  --deleteResetBtnBackground: hsl(225, 21%, 49%);
+  --deleteResetBtnShadow: hsl(224, 28%, 35%);
+  --equalBtnBackground: hsl(6, 63%, 50%);
+  --equalBtnShadow: hsl(6, 70%, 34%);
+  --normalBtnBackground: hsl(30, 25%, 89%);
+  --normalBtnShadow: hsl(28, 16%, 65%);
+  --normalBtnTextColor: hsl(221, 14%, 31%);
+  --defaultTextColor: hsl(0, 0%, 100%);
+  --equalTextColor: hsl(0, 0%, 100%);
+  --deleteResetTextColor: hsl(0, 0%, 100%);
+}
+
+.light {
+  --background: hsl(0, 0%, 90%);
+  --btnsContainerBackground: hsl(0, 5%, 81%);
+  --screenBackground: hsl(0, 0%, 93%);
+  --deleteResetBtnBackground: hsl(185, 42%, 37%);
+  --deleteResetBtnShadow: hsl(185, 58%, 25%);
+  --equalBtnBackground: hsl(25, 98%, 40%);
+  --equalBtnShadow: hsl(25, 99%, 27%);
+  --normalBtnBackground: hsl(45, 7%, 89%);
+  --normalBtnShadow: hsl(28, 16%, 65%);
+  --normalBtnTextColor: hsl(60, 10%, 19%);
+  --defaultTextColor: hsl(0, 0%, 0%);
+  --equalTextColor: hsl(0, 0%, 100%);
+  --deleteResetTextColor: hsl(0, 0%, 100%);
+}
+
+.saturated {
+  --background: hsl(268, 75%, 9%);
+  --btnsContainerBackground: hsl(268, 71%, 12%);
+  --screenBackground: hsl(268, 71%, 12%);
+  --deleteResetBtnBackground: hsl(281, 89%, 26%);
+  --deleteResetBtnShadow: hsl(285, 91%, 52%);
+  --equalBtnBackground: hsl(176, 100%, 44%);
+  --equalBtnShadow: hsl(177, 92%, 70%);
+  --normalBtnBackground: hsl(268, 47%, 21%);
+  --normalBtnShadow: hsl(290, 70%, 36%);
+  --normalBtnTextColor: hsl(52, 100%, 62%);
+  --defaultTextColor: hsl(52, 100%, 62%);
+  --equalTextColor: hsl(198, 20%, 13%);
+  --deleteResetTextColor: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.calc {
+  height: 35rem;
+  width: 27rem;
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  color: var(--defaultTextColor);
+}
+.calc-header__themes {
+  display: flex;
+  width: 8rem;
+  height: 3rem;
+}
+.calc-header__themes span {
+  align-self: center;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.calc-header__themes__numbers label {
+  margin: 0rem 0.32rem;
+  font-size: 0.75rem;
+}
+.calc-header__themes__inputs {
+  padding: 0.3rem 0.1rem;
+  border-radius: 15px;
+  background: var(--btnsContainerBackground);
+  display: flex;
+}
+.calc-header__themes__inputs input {
+  margin: 0rem 0.2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.41rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calc-header__themes__inputs input:checked {
+  background: var(--equalBtnBackground);
+}
+
+.calc-screen {
+  width: 100%;
+  height: 7rem;
+  border-radius: 10px;
+  background: var(--screenBackground);
+  color: var(--defaultTextColor);
+  position: relative;
+}
+.calc-screen__first {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  flex-direction: row-reverse;
+  padding-right: 1rem;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.calc-screen__second {
+  border-radius: 0px 0px 10px 10px;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 1rem;
+}
+.calc-screen__result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 3rem;
+  flex-direction: row-reverse;
+  padding-right: 1rem;
+  font-size: 2rem;
+}
+
+.calc-buttons {
+  width: 100%;
+  height: 23rem;
+  padding: 1.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background: var(--btnsContainerBackground);
+}
+.calc-buttons button {
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.calc-buttons__number {
+  background: var(--normalBtnBackground);
+  box-shadow: 0 4.5px var(--normalBtnShadow);
+  color: var(--normalBtnTextColor);
+}
+.calc-buttons__operation {
+  background: var(--normalBtnBackground);
+  color: var(--normalBtnTextColor);
+  box-shadow: 0 4.5px var(--normalBtnShadow);
+}
+.calc-buttons__comma {
+  background: var(--normalBtnBackground);
+  color: var(--normalBtnTextColor);
+  box-shadow: 0 4.5px var(--normalBtnShadow);
+}
+.calc-buttons__delete {
+  text-transform: uppercase;
+  background: var(--deleteResetBtnBackground);
+  color: var(--deleteResetTextColor);
+  box-shadow: 0 4.5px var(--deleteResetBtnShadow);
+}
+.calc-buttons__reset {
+  grid-column: 1/3;
+  text-transform: uppercase;
+  color: var(--deleteResetTextColor);
+  background: var(--deleteResetBtnBackground);
+  box-shadow: 0 4.5px var(--deleteResetBtnShadow);
+}
+.calc-buttons__compute {
+  grid-column: 3/5;
+  color: var(--equalTextColor);
+  background: var(--equalBtnBackground);
+  box-shadow: 0 4.5px var(--equalBtnShadow);
+}
+.calc-buttons__delete:hover, .calc-buttons__reset:hover, .calc-buttons__compute:hover, .calc-buttons__number:hover, .calc-buttons__operation:hover, .calc-buttons__comma:hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=style.css.map */

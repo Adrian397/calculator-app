@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <main class="calc">
+      <div class="calc-header">
+        <h3>calc</h3>
+        <div class="calc-header__themes">
+          <span>theme</span>
+
+          <div>
+            <div class="calc-header__themes__numbers">
+              <label for="first">1</label>
+              <label for="second">2</label>
+              <label for="third">3</label>
+            </div>
+            <div class="calc-header__themes__inputs">
+              <input
+                class="input-dark-theme"
+                type="radio"
+                id="first"
+                name="theme"
+              />
+              <input
+                class="input-light-theme"
+                type="radio"
+                id="second"
+                name="theme"
+              />
+              <input
+                class="input-saturated-theme"
+                type="radio"
+                id="third"
+                name="theme"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-screen">
+        <div class="calc-screen__first"></div>
+        <div class="calc-screen__second"></div>
+      </div>
+      <div class="calc-buttons">
+        <button class="calc-buttons__number">7</button>
+        <button class="calc-buttons__number">8</button>
+        <button class="calc-buttons__number">9</button>
+        <button class="calc-buttons__delete">del</button>
+        <button class="calc-buttons__number">4</button>
+        <button class="calc-buttons__number">5</button>
+        <button class="calc-buttons__number">6</button>
+        <button class="calc-buttons__operation">+</button>
+        <button class="calc-buttons__number">1</button>
+        <button class="calc-buttons__number">2</button>
+        <button class="calc-buttons__number">3</button>
+        <button class="calc-buttons__operation">-</button>
+        <button class="calc-buttons__number">.</button>
+        <button class="calc-buttons__number">0</button>
+        <button class="calc-buttons__operation">/</button>
+        <button class="calc-buttons__operation">x</button>
+        <button class="calc-buttons__reset">reset</button>
+        <button class="calc-buttons__compute">=</button>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
