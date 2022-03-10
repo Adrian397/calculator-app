@@ -1,4 +1,4 @@
-# Calculator App made using Vanilla JS and SCSS 
+# Calculator App made with Vanilla JS and SCSS 
 
 Live site: https://calculator-app-4bc46a.netlify.app
 
